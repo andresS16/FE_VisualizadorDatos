@@ -17,7 +17,7 @@ function SideBar() {
             <li className="nav-item active">
                 <Link className="nav-Link" to="/products">
                     <i className="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard - process automation</span></Link>
+                    <span>Dashboard-process automation</span></Link>
             </li>
 
             {/* <!-- Divider --> */}
@@ -26,29 +26,7 @@ function SideBar() {
             {/* <!-- Heading --> */}
             <div className="sidebar-heading">Actions</div>
 
-            {/* <!-- Nav Item - Pages --> */}
-            <li className="nav-item">
-                <Link className="nav-Link collapsed" to="/genres">
-                    <i className="fas fa-fw fa-folder"></i>
-                    <span>Genres</span>
-                </Link>
-            </li>
-
-            {/* <!-- Nav Item - Charts --> */}
-            {/* <li className="nav-item">
-                <a className="nav-Link" href="/">
-                    <i className="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li> */}
-
-            {/* <!-- Nav Item - Tables --> */}
-            {/* <li className="nav-item">
-                <a className="nav-Link" href="/">
-                    <i className="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li> */}
-
-            {/* <!-- Divider --> */}
+            
             <hr className="sidebar-divider d-none d-md-block" />
         </ul>
 

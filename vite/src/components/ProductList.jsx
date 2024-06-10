@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function MovieList (props) {
+function ProductList (props) {
     return(
         <tr>
             <td>{props.id}</td>
@@ -10,7 +10,7 @@ function MovieList (props) {
     )
 }
 
-MovieList.propTypes = { 
+ProductList.propTypes = { 
     id: PropTypes.oneOfType([
         PropTypes.number,
         PropTypes.string
@@ -25,4 +25,4 @@ MovieList.propTypes = {
     ]),
 }
 
-export default MovieList;
+export default ProductList;

@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MovieList from './MovieList';
+import ProductList from './ProductList';
 
-class Movie extends React.Component {
+class Product extends React.Component {
   
     render() {
         return (
             <>
-                {/*<!-- MOVIES LIST -->*/}
-                <h1 className="h3 mb-2 text-gray-800 ">Reporte de stock</h1>
-
-                {/*<!-- DataTales Example -->*/}
+              
+                <h1 className="h3 mb-2 text-gray-800 ">Reporte de stock</h1>    
                 <div className="card shadow mb-4">
                     <div className="card-body">
                         <div className="table-responsive">
@@ -25,8 +23,8 @@ class Movie extends React.Component {
                                 </thead>
                                 <tbody>
                                     {
-                                        this.props.movies.map((movie, index) => {
-                                            return <MovieList {...movie} key={index} />
+                                        this.props.products.map((product, index) => {
+                                            return <ProductList {...product} key={index} />
                                         })
                                     }
                                 </tbody>
@@ -41,11 +39,11 @@ class Movie extends React.Component {
     }
 }
 
-Movie.propTypes = {
-    movies: PropTypes.array.isRequired
+Product.propTypes = {
+    products: PropTypes.array.isRequired
 };
 
-Movie.defaultProps = {
-    movies: []
+Product.defaultProps = {
+    products: []
 }
-export default Movie;
+export default Product;

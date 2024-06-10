@@ -1,9 +1,9 @@
 import React from "react";
-import Movie from "../components/Movie";
+import Product from "../components/Product";
 
-class MoviesPage extends React.Component {
+class ProductsPage extends React.Component {
     state = {
-        movies: []
+        products: []
     }
 
     componentDidMount() {
@@ -16,7 +16,7 @@ class MoviesPage extends React.Component {
         })
             .then(response => response.json())
             .then(data => {                        
-                this.setState({ movies: data });
+                this.setState({ products: data });
             })
             .catch(error => console.log(error));
     }
@@ -24,10 +24,10 @@ class MoviesPage extends React.Component {
         console.log('render recepcion datos api')  
         return (
            
-            <Movie movies={this.state.movies} />
+            <Product products={this.state.products} />
         );
     }
 
 }
 
-export default MoviesPage;
+export default ProductsPage;

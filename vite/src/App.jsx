@@ -5,8 +5,7 @@ import './App.css'
 import { Switch, Route } from 'react-router-dom/cjs/react-router-dom.min';
 import SideBar from './components/SideBar'
 import HomePage from './pages/Home'
-import MoviePage from './pages/Movies';
-import Genres from './pages/Genres'; 
+import ProductPage from './pages/Products';
 import NotFound from './pages/NotFound';
 
 
@@ -18,8 +17,7 @@ function App() {
       <SideBar/>
       <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route path="/movies" component={MoviePage}/>
-      <Route path="/genres" component={Genres}/>
+       <Route path="/products" component={ProductPage}/>    
       <Route path="*" component={NotFound}/>
       </Switch> 
     </div>
