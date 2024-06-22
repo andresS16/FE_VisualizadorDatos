@@ -5,15 +5,8 @@ import Footer from "./Footer";
 // import Movie from "./Product";
 import DataStock from "../pages/Products";
 
-import { Component } from "react";
-
-class ContentWrapper extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            movies:[]
-        }
-    }
+function ContentWrapper() {
+  
     // componentDidMount() {
     //     fetch('http://localhost:3001/api/movies', {
     //         method: 'GET',
@@ -26,10 +19,8 @@ class ContentWrapper extends Component {
     //              this.setState({movies: movies.data})
     //         })).catch(e => console.log(e))
     // }
-    render() {
         return (
             <div id="content-wrapper" className="d-flex flex-column">
-
                 <div id="content">
                     <TopBar />
                     <ContentRowTop />
@@ -38,7 +29,6 @@ class ContentWrapper extends Component {
                 <Footer />
             </div>
         );
-    }
+ }
 
-}
 export default ContentWrapper;

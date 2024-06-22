@@ -1,14 +1,14 @@
-import React from 'react';
+
 import PropTypes from 'prop-types';
-
 import ProductList from './ProductList';
+import { useContext } from 'react';
+import { InitDataContext } from '../context/InitDataContext';
 
-class Product extends React.Component {
+function Product () {
+    const {products} = useContext(InitDataContext);
   
-    render() {
         return (
-            <>
-              
+            <>             
                 <h1 className="h3 mb-2 text-gray-800 ">Reporte de stock</h1>    
                 <div className="card shadow mb-4">
                     <div className="card-body">
@@ -23,7 +23,7 @@ class Product extends React.Component {
                                 </thead>
                                 <tbody>
                                     {
-                                        this.props.products.map((product, index) => {
+                                        products?.data?.map((product, index) => {
                                             return <ProductList {...product} key={index} />
                                         })
                                     }
@@ -36,8 +36,8 @@ class Product extends React.Component {
 
 
         )
-    }
 }
+
 
 Product.propTypes = {
     products: PropTypes.array.isRequired
