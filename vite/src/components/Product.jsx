@@ -23,7 +23,7 @@ function Product () {
                                 </thead>
                                 <tbody>
                                     {
-                                        products?.data?.map((product, index) => {
+                                        products?.map((product, index) => {
                                             return <ProductList {...product} key={index} />
                                         })
                                     }

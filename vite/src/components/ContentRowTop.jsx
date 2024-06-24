@@ -1,4 +1,4 @@
-
+import BarChart from './BarChart'
 function ContentRowTop () {
 
 		return (
@@ -6,13 +6,13 @@ function ContentRowTop () {
 				<div className="d-sm-flex align-items-center justify-content-between mb-4">
 					<h1 className="h3 mb-0 text-gray-800">JANUS Dashboard</h1>
 				</div>
-				{/* <ContentRowProduct data={data} />			 */}
+				{/* <ContentRowProduct data={data} />*/}
 				<div className="row">
-					{/* <Componente data={data1} />			 */}
+					{/* <Componente data={data1} />	*/}
+					<BarChart/>
 				</div>			
 			</div>
 		);  
 }
-
 
 export default ContentRowTop;

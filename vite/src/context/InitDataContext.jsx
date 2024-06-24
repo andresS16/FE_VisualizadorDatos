@@ -7,7 +7,7 @@ const InitDataContext = createContext();
 
 function InitDataProvider({ children }) {
     const [data, setData] = useState({
-        products: null,
+        products: [],
        
     });
 
@@ -15,7 +15,7 @@ useEffect(()=>{
     (async function(){
         try{
         const products = await axios.get('https://localhost:7097/api/Stock/obtenertodos');    
-        setData({products: products })
+        setData({products: products.data })
         }catch(error){
             throw new Error(error);  
         }
