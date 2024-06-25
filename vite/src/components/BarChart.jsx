@@ -1,21 +1,21 @@
-
+import PropTypes from 'prop-types';
 import {  Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { InitDataContext } from '../context/InitDataContext';
 import { useContext } from 'react';
 
-function  BarChart() {
+function  BarChart(datosx) {
   const {products} = useContext(InitDataContext);
 console.log(products);
   // Datos del gráfico
   const data = {
-    labels: products.map(product => product.productName),
+    labels: datosx.datosx.map(x => x) ,
     datasets: [
       {
-        label: 'Tn vs productos',
+        label: `${datosx.labelName} vs productos`,
         backgroundColor: 'rgba(75,192,192,0.4)',
         borderColor: 'rgba(75,192,192,1)',
-        data:  products.map(product => product.amount),
+        data: datosx.datosy.map(y => y) ,
       },
     ],
   };
@@ -32,6 +32,17 @@ console.log(products);
       < Bar data={data} options={options} />
     </div>
   );
+}
+BarChart.propTypes = {
+  datosx: PropTypes.array.isRequired,
+  datosy: PropTypes.array.isRequired,
+  labelName: PropTypes.string
+};
+
+BarChart.defaultProps = {
+  datosx: [],
+  datosy: [],
+  labelName: PropTypes.string
 }
 
 export default  BarChart;
